@@ -31,8 +31,10 @@
 \cfoot{\hyperlink{contents}{{\textnormal{Contents}}}}
 \fi
 
-
-
+% pour avoir les caractères français
+\usepackage[utf8]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[francais]{babel}
 
 \usepackage{pslatex} % -- times instead of computer modern, especially for the plain article class
 \usepackage[colorlinks=true,bookmarks=false]{hyperref}
@@ -125,7 +127,7 @@
 \pagestyle{empty}
 \ \\
 \vspace{1cm}
-{\usekomafont{title}\mdseries\huge Digital Design with Chisel}
+{\usekomafont{title}\mdseries\huge La conception numérique avec Chisel}
 \cleardoublepage
 \end{flushleft}
 \newpage
@@ -135,7 +137,7 @@
 \pagestyle{empty}
 \ \\
 \vspace{1cm}
-{\usekomafont{title}\Huge Digital Design with Chisel\\
+{\usekomafont{title}\Huge La conception numérique avec Chisel\\
 \bigskip
 \bigskip
 \bigskip
@@ -175,6 +177,7 @@ Visit the source at \url{https://github.com/schoeberl/chisel-book}
 \medskip
 
 Published 2019 by Kindle Direct Publishing,\\
+(pas encore publié en français),\\
 \url{https://kdp.amazon.com/}
 \medskip
 \medskip
@@ -188,13 +191,11 @@ Schoeberl, Martin
 Digital Design with Chisel\\
 Martin Schoeberl\\
 Includes bibliographical references.\\ \todo{and index. \\}
-ISBN 9781689336031
+ISBN Nope
 \end{quote}
 
 \bigskip
 
-
-Manufactured in the United States of America.
 
 Typeset by Martin Schoeberl.}
 \end{flushleft}
@@ -224,11 +225,24 @@ Typeset by Martin Schoeberl.}
 \chapter{Preface}
 
 % This text goes on the backside of the book, and in Amazon description
-This book is an introduction to digital design with the focus on using the hardware construction language Chisel. Chisel brings advances from software engineering, such as object-orientated and functional languages, into digital design.
+%This book is an introduction to digital design with the focus on using the hardware construction language Chisel. Chisel brings advances from software engineering, such as object-orientated and functional languages, into digital design.
+Ce livre est une introduction à la conception numérique ce concentrant sur le
+langage de description matériel Chisel. Chisel est un nouveau langage de
+description matériel (HDL pour Hardware Description Language) qui permet
+d'apporter la programmation objet et fonctionnelle dans le monde de la
+conception numérique.
 
-This book addresses hardware designers and software engineers. Hardware designers, with knowledge of Verilog or VHDL, can upgrade their productivity with a modern language for their next ASIC or FPGA design. Software engineers, with knowledge of object-oriented and functional programming, can leverage their knowledge to program hardware, for example, FPGA accelerators executing in the cloud.
+% This book addresses hardware designers and software engineers. Hardware designers, with knowledge of Verilog or VHDL, can upgrade their productivity with a modern language for their next ASIC or FPGA design. Software engineers, with knowledge of object-oriented and functional programming, can leverage their knowledge to program hardware, for example, FPGA accelerators executing in the cloud.
+Ce livre s'adresse aux ingénieurs en électronique autant qu'aux ingénieurs en
+informatique. Les ingénieurs en électronique qui connaissent déjà le Verilog
+et/ou le VHDL pourront augmenter leurs productivité avec un langage
+informatique moderne (basé sur le Scala) pour leur prochain projet en FPGA ou
+ASIC. Les ingénieurs en informatique pourront tirer parti de leurs
+connaissances en programmation objets et fonctionnelles pour concevoir du
+matériel, et utiliser – par exemple – des accélérateurs FPGA dans le «nuage».
 
-The approach of this book is to present small to medium-sized typical hardware components to explore digital design with Chisel.
+%The approach of this book is to present small to medium-sized typical hardware components to explore digital design with Chisel.
+Ce livre explore de petites et moyenne architectures numérique en Chisel.
 
 % about me, backside
 
